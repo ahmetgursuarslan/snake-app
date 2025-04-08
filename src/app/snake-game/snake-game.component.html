@@ -1,0 +1,21 @@
+<div class="game-container">
+  <h1>Snake Game</h1>
+  
+  <div class="canvas-container">
+    <canvas #gameCanvas></canvas>
+  </div>
+  
+  <div class="controls" *ngIf="gameStarted">
+    <button (click)="resetGame()">Main Menu</button>
+    <button (click)="togglePause()">{{ paused ? 'Continue' : 'Pause' }}</button>
+  </div>
+  
+  <div class="instructions" *ngIf="gameStarted">
+    <h3>How to Play?</h3>
+    <ul>
+      <li>Use <strong>arrow keys</strong> to control the snake</li>
+      <li>Press <strong>SPACE</strong> to pause the game</li>
+      <li>Press <strong>ENTER</strong> to restart when game is over</li>
+    </ul>
+  </div>
+</div>
